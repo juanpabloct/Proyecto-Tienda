@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/crud.css' %}">
+{% endblock link %}
+{% block content %}
+<div id="forms">
+    <form action="{% url 'crud' %}" id="form" method="post"> {% csrf_token %}
+        <h2>Producto a vender</h2>
+        {{tipo}}
+        {{genero.genero}}
+        <input type="submit">
+    </form>
+</div>
+{% endblock content %}

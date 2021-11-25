@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Llena el formulario de Ropa</h1>
+<form action="{% url 'guardar' category %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="enviar">
+</form>{% endblock content %}
+

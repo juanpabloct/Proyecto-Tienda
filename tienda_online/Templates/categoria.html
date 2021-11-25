@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Inicio</title>{% endblock title %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock link %}
+{% block content %}
+<div id="productos">
+    <h2>Productos</h2>
+            {% for producto in all_products %}
+            <div id="target">
+                <p>{{producto.marca}} {{producto.referencia}}</p>
+                <p>{{ producto.descripcion }}</p>
+                <p>{{producto.estado}}</p>
+                <p>${{ producto.precio }}</p>
+                <div id="Img">
+                    <a href="{% url 'borrar' producto.id %}" id="link_img">
+                        <img src="{% static 'img/eliminar.png' %}" alt="Eliminar">
+                    </a>
+                    <a href="{% url 'actualizar' producto.id %}"id="link_img">
+                    <img src="{% static 'img/actualizar.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+<a href="{% url 'crear' category  %}"><button id="agregar"> Agregar Un Producto </button></a>
+{% endblock content %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}{% endblock title %}
+    {% block link %}{% endblock link %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<div id="contenedor">
+    <nav id='menu'>
+        <a href="{% url 'Inicio' %}" >    
+            <img src="{% static 'img/tienda.png' %}" alt="Logo">
+        </a>
+        <div id="contenedor_productos" >
+            <a href="{% url 'productos' %}" id="productos" >Productos</a>
+            <div id="sub_productos">
+                <a href="Tecnologia" id="sub_producto">Tecnologia</a>
+                <a href="Ropa" id="sub_producto">Ropa</a>
+                <a href="Hogar" id="sub_producto">Accesorios para el hogar</a>
+            </div>
+        </div>
+            
+            <a href="{% url 'compras' %}">Compras</a>
+        <a href="">
+            Notificaciones
+        </a>
+        <a href="">
+            Ajustes
+        </a>
+    </nav>
+    {% block content %}{% endblock content %}
+    <p>
+    </p>
+</div>
+    <footer id='footer'>
+        <h1>Sobre Nosotros</h1>
+        <P>Somos mercado expo colombia</P>
+        <h1>Contactanos Por: </h1>
+    </footer>
+</body>
+</html>

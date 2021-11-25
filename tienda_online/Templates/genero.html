@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Llena el formulario de Ropa</h1>
+    <form action="{% url 'clothes_form' tipo %}" method="post">
+        {% csrf_token %}
+        {{forms.as_p}}
+        {% if message_list %}
+            <ul>
+                {% for message in message_list %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <input type="submit" value="enviar">
+    </form>
+{% endblock content %}

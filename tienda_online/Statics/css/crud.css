@@ -1,0 +1,27 @@
+#forms{
+    background-color: rgb(114, 131, 161);
+    width: 77%;
+    margin-left: 14vh;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#form>textarea, form>input, form>select{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+    height: 30px;
+}
+#l_producto{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+body{
+    background-color: rgba(99, 87, 87, 0.74);
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;}
