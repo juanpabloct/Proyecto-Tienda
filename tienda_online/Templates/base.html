@@ -12,8 +12,11 @@
 <body>
 <div id="contenedor">
     <nav id='menu'>
-        <a href="{% url 'Inicio' %}" >    
-            <img src="{% static 'img/tienda.png' %}" alt="Logo">
+        <div id="contenedor-logo">
+            <a href="{% url 'Inicio' %}" >    
+            <img src="{% static 'img/tienda.png' %}" id="logo-menu" alt="Logo">
+               <div class="div"><b>Stores Mark</b></div>
+        </div>
         </a>
         <div id="contenedor_productos" >
             <a href="{% url 'productos' %}" id="productos" >Productos</a>
@@ -38,7 +41,7 @@
 </div>
     <footer id='footer'>
         <h1>Sobre Nosotros</h1>
-        <P>Somos mercado expo colombia</P>
+        <P>Somos Una tienda que intenta interactuar los vendedores con los compradores facilmente</P>
         <h1>Contactanos Por: </h1>
     </footer>
 </body>
