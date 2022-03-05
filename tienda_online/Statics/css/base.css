@@ -58,3 +58,13 @@ a{
 #sub_productos>a:hover{
     background-color: rgba(0, 0, 0, 0.356);
 }
+#nombre{
+    font-size: 25px;
+}
+#contenedor-logo{
+    width: 20%;
+}
+#logo-menu{
+    width: 50%;
+    height: 100%;
+}
